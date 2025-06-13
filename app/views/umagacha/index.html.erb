@@ -1,0 +1,8 @@
+<div style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+  <h1 class= "text-4xl font-serif ">UMAガチャ<br>～未知との遭遇～</h1>
+  <%= image_tag "forest.png", size: "360x480", alt: "森", class: "mt-4"%>
+  <p class="mt-4">今日はどんなUMAに出会えるかな？</p>
+  <div class="mt-4">
+    <%= button_to "UMAを探しに行く", result_path(times: 1), class: "bg-black text-white p-2 rounded" %>
+  </div>
+</div> 

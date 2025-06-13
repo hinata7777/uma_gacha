@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリ名：未知との遭遇　UMAガチャ
 
-Things you may want to cover:
+概要：ボタンを押すとUMAがランダムに出てくる
 
-* Ruby version
+コンセプト：１日１UMA。疲れたあなたにUMAを。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+アプリ概要：UMAがランダムで出現するぞ！やったね！
