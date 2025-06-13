@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  
+  root "umagacha#index"
+  get "umagacha/index"
+  get "umagacha/result"
+  post "result" => "umagacha#result"
+  get "result" => "umagacha#result"
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Render dynamic PWA files from app/views/pwa/*
@@ -7,7 +12,4 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root "diagnoses#index"
-
-  resources :diagnoses, only: %i[index new create]
 end
