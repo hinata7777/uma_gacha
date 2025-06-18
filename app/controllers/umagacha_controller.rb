@@ -4,19 +4,36 @@ class UmagachaController < ApplicationController
   end
 
   def result
-    results = times.times.map do
-      number = rand(1..100)
-
-      uma = 
-        case number 
-        when 100
-          "ら〇てくん"
-        when 95..99
-          ""
-        end
-        { result: uma }
+    number = rand(1..15)
+    uma = 
+      case number 
+      when 1
+         "ネッシー"
+      when 2
+        "イエティ"
+      when 3
+        "ツチノコ"
+      when 4
+        "河童"
+      when 5
+        "ペガサス"
+      when 6
+        "エイリアン"
+      when 7
+        "クラーケン"
+      when 8
+        "チュパカブラ"
+      when 9
+        "ビッグフット"
+      when 10
+        "モスマン"
+      when 11
+        "ジャージー・デビル"
+      when 12
+        "イッシー"
       end
-      session[:last_results] = results
-      redirect_to result_path
+    { result: uma }
+    session[:last_results] = result
+    redirect_to result_path
   end
 end
