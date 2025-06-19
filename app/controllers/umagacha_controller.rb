@@ -1,39 +1,49 @@
 class UmagachaController < ApplicationController
   def index
-    session.delete(:last_results)
+    session.delete(:uma)
   end
 
   def result
-    number = rand(1..15)
-    uma = 
+    number = rand(1..100)
+    @uma = 
       case number 
-      when 1
+      when 1..8
          "ネッシー"
-      when 2
+      when 9..16
         "イエティ"
-      when 3
+      when 17..24
         "ツチノコ"
-      when 4
+      when 25..32
         "河童"
-      when 5
+      when 33..40
         "ペガサス"
-      when 6
+      when 41..48
         "エイリアン"
-      when 7
+      when 49..56
         "クラーケン"
-      when 8
+      when 57..64
         "チュパカブラ"
-      when 9
+      when 65..72
         "ビッグフット"
-      when 10
+      when 73..80
         "モスマン"
-      when 11
+      when 81..88
         "ジャージー・デビル"
-      when 12
-        "イッシー"
+      when 89..96
+        "ユニコーン"
+      when 97..99
+        "チュパカブラの群れ"
+      when 100
+        "UMAの群れ"
       end
-    { result: uma }
-    session[:last_results] = result
-    redirect_to result_path
+    session[:uma] = @uma
+    redirect_to show_result_path
+  end
+
+  def show_result
+    @uma = session[:uma] 
+    unless @uma
+      redirect_to root_path, aleat: "もう一度UMAを探してね!"
+    end
   end
 end

@@ -1,0 +1,60 @@
+<div style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+  <br>
+  <h1 class= "text-2xl text-white font-bold font-serif">発見したUMAは...</h1>
+  <br>
+  <div class= "text-5xl text-red-700 font-bold font-serif">
+  <%= @uma %>
+  <% if ["チュパカブラの群れ", "UMAの群れ"].include?(@uma) %>
+  <br>
+  <h2 class= "text-xl text-white font-serif mt-4">これは恐ろしい！！</h2>
+  <% end %>
+  <%= image_tag "#{@uma}.png", size: "360x360", alt: "#{@uma}", class: "mt-4" %>
+  </div>
+  <div class= "text-xl text-white font-serif mt-4">
+  <% case @uma %>
+    <% when "ネッシー" %>
+      <%= "スコットランド・ネス湖に棲むとされる恐竜型の水棲生物" %> 
+    <% when "イエティ" %>
+      <%= "ヒマラヤ山脈にいるという白い体毛を持つUMA" %> 
+    <% when "ツチノコ" %>
+      <%= "日本で古くから語られる、胴体が太く短いヘビ型UMA" %> 
+    <% when "河童" %>
+      <%= "日本の伝説に登場する水の妖怪。川や池に住み、頭に水が入った皿をもつ。" %> 
+    <% when "ペガサス" %>
+      <%= "ギリシャ神話に登場する、空を飛ぶ力を持つ象徴的な神獣" %> 
+    <% when "エイリアン" %>
+      <%= "地球外から来たとされる知的生命体" %> 
+    <% when "クラーケン" %>
+      <%= "北欧の伝説に登場する巨大な海の怪物" %> 
+    <% when "チュパカブラ" %>
+      <%= "中南米で家畜を襲うとされる吸血生物" %> 
+    <% when "ビッグフット" %>
+      <%= "北米の森に住むとされる大型類人猿" %> 
+    <% when "モスマン" %>
+      <%= "アメリカ・ウェストバージニア州で目撃された翼を持つ人型の生物" %> 
+    <% when "ジャージー・デビル" %>
+      <%= "アメリカ・ニュージャージー州に現れる怪物。馬の頭と翼を持つ。" %> 
+    <% when "ユニコーン" %>
+      <%= "伝説上の生き物で、馬のような体に一本の螺旋状の角を持っている。" %> 
+    <% when "チュパカブラの群れ" %>
+      <%= "逃げろ。殺される。" %> 
+    <% when "UMAの群れ" %>
+      <%= "UMA大集合!やったね!" %>   
+  <% end %>
+  </div>
+</div>
+
+<% tweet_text = "あなたは#{@uma}を発見したぞ！" %>
+  <% if ["チュパカブラの群れ", "UMAの群れ"].include?(@uma) %>
+    <% tweet_text += "恐ろしい！" %>
+  <% end %>
+
+<div style="margin-top: 20px; margin-bottom: 5px; display: flex; justify-content: center; width: 100%;">
+  <%= link_to "シェアして自慢する", 
+        "https://twitter.com/intent/tweet?url=#{root_url}&text=#{CGI.escape(tweet_text)}&hashtags=UMAガチャ&media=#{CGI.escape("#{image_url(@uma)}.png")}",
+        target: "_blank", class: "bg-black text-white p-2 rounded" %>
+</div>
+
+<div style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: center; width: 100%;">
+  <%= link_to "戻る", root_path, class: "btn btn-info text-white" %>
+</div>
