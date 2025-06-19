@@ -20,6 +20,10 @@ gem "jbuilder"
 gem "tailwindcss-rails"
 
 gem "tailwindcss-ruby", "3.4.17"
+
+gem 'mini_magick'
+
+gem 'meta-tags'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
