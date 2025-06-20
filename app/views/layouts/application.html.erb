@@ -4,6 +4,7 @@
     <title><%= content_for(:title) || "UMAガチャ" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= favicon_link_tag('favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,7 +18,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
-    <%= display_meta_tags(default_meta_tags) %>
+    <meta property="og:title" content="UMAガチャ" />
+    <meta property="og:description" content="君もUMAを探しに行こう！" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:type" content="website" />
+    <% og_image = @image.present? ? image_url(@image) : "#{request.base_url}/parrot_01.png" %>
+    <meta property="og:image" content="<%= og_image %>" />
   </head>
 
 
