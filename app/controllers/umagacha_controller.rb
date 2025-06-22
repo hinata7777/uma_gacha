@@ -6,7 +6,7 @@ class UmagachaController < ApplicationController
   def result
     number = rand(1..100)
     @uma = 
-      case number 
+      case number
       when 1..8
          "ネッシー"
       when 9..16
