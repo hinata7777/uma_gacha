@@ -15,6 +15,16 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <%= favicon_link_tag('favicon.ico') %>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="UMAガチャ" />
+    <meta name="twitter:description" content="君もUMAを探しに行こう!" />
+    <meta name="twitter:image" content="<%= image_url('ong.png') %>" />
+    <meta property="og:title" content="UMAガチャ" />
+    <meta property="og:description" content="君もUMAを探しに行こう!" />
+    <meta property="og:image" content="<%= image_url('ong.png') %>" />
+    <meta property="og:url" content="<%= root_url %>" />
+    <meta property="og:type" content="website" />
   </head>
 
   <body>
