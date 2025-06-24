@@ -4,7 +4,7 @@
   <br>
   <div class= "text-5xl text-red-700 font-bold font-serif">
     <%= @uma %>
-    <% if ["チュパカブラの群れ", "UMAの群れ"].include?(@uma) %>
+    <% if ["チュパカブラの群れ", "UMAの群れ", "謎のキメラ"].include?(@uma) %>
     <br>
     <h2 class= "text-xl text-white font-serif mt-4">これは恐ろしい！！</h2>
     <% end %>
@@ -39,13 +39,15 @@
       <% when "チュパカブラの群れ" %>
         <%= "逃げろ。殺される。" %> 
       <% when "UMAの群れ" %>
-        <%= "UMA大集合!やったね!" %>   
+        <%= "UMA大集合!やったね!" %>  
+      <% when "謎のキメラ" %>
+        <%= "既視感があるキメラ生物。おっと、誰か来たようだ。" %>  
     <% end %>
   </div>
 </div>
 
 <% tweet_text = "あなたは#{@uma}を発見したぞ！" %>
-  <% if ["チュパカブラの群れ", "UMAの群れ"].include?(@uma) %>
+  <% if ["チュパカブラの群れ", "UMAの群れ", "謎のキメラ"].include?(@uma) %>
     <% tweet_text += "恐ろしい！" %>
   <% end %>
 
