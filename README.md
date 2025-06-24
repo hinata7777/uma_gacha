@@ -6,13 +6,12 @@
 # 使い方
 
 1. 「UMAを探しに行く」ボタンを押そう！
-2. UMAが現れるぞ！中にはレアはUMAもいるかも...?
+2. UMAが現れるぞ！中にはレアなUMAもいるかも...?
 
 
 # 技術スタック
 
 HTML / CSS,
-Javasprict,
 Ruby,
 Ruby on rails,
 tailwind CSS
