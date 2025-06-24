@@ -1,9 +1,24 @@
-# README
+# UMAガチャ　～未知との遭遇～
 
-アプリ名：未知との遭遇　UMAガチャ
+君もUMAを探しに行こう！
 
-概要：ボタンを押すとUMAがランダムに出てくる
 
-コンセプト：１日１UMA。疲れたあなたにUMAを。
+# 使い方
 
-アプリ概要：UMAがランダムで出現するぞ！やったね！
+1. 「UMAを探しに行く」ボタンを押そう！
+2. UMAが現れるぞ！中にはレアはUMAもいるかも...?
+
+
+# 技術スタック
+
+HTML / CSS,
+Javasprict,
+Ruby,
+Ruby on rails,
+tailwind CSS
+
+# 作者
+hinata(RUNTEQ68期A)
+X（旧Twitter）: @hinanata72
+
+https://x.com/hinanata72
