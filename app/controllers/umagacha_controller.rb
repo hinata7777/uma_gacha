@@ -4,37 +4,39 @@ class UmagachaController < ApplicationController
   end
 
   def result
-    number = rand(1..100)
+    number = rand(1..200)
     @uma = 
       case number
-      when 1..8
+      when 1..16
          "ネッシー"
-      when 9..16
+      when 17..32
         "イエティ"
-      when 17..24
+      when 33..48
         "ツチノコ"
-      when 25..32
+      when 49..64
         "河童"
-      when 33..40
+      when 65..80
         "ペガサス"
-      when 41..48
+      when 81..96
         "エイリアン"
-      when 49..56
+      when 97..112
         "クラーケン"
-      when 57..64
+      when 113..128
         "チュパカブラ"
-      when 65..72
+      when 129..144
         "ビッグフット"
-      when 73..80
+      when 145..160
         "モスマン"
-      when 81..88
+      when 161..176
         "ジャージー・デビル"
-      when 89..96
+      when 177..192
         "ユニコーン"
-      when 97..99
+      when 193..197
         "チュパカブラの群れ"
-      when 100
+      when 198..199
         "UMAの群れ"
+      when 200
+        "謎のキメラ"
       end
     session[:uma] = @uma
     redirect_to show_result_path
